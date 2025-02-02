@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 64px;
+  font-family: "Roboto", sans-serif;
+}
+
+body .cabecalho {
+  display: flex;
+  flex-direction: column;
+  height: min-content;
+  align-self: start;
+  padding-bottom: 64px;
+}
+
+h2 {
+    color: #baa193;
+    font-size: 35px;
+  }
+  
+  h1 {
+    color: #72005f;
+    font-size: 60px;
+    margin-top: -16px;
+  }
+  
+
+body .container_conselho {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: row;
+  align-self: center;
+}
+
+body .container_conselho .texto {
+  display: flex;
+  flex-direction: column;
+  padding: 64px;
+}
+
+body .container_conselho .texto .goat {
+  font-size: 30px;
+  align-self: flex-end;
+  color: #baa193;
+}
+
+body .container_conselho .texto #conselho {
+  font-size: 40px;
+  color: #72005f;
+  font-weight: bold;
+}
+
+body .container_conselho .fundo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #baa193;
+  opacity: 0.3;
+  z-index: -1;
+  border-radius: 32px;
+}
+
+img {
+  border-radius: 0 32px 32px 0;
+  width: auto;
+  height: 500px;
+}

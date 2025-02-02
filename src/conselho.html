@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conselho</title>
+    <link rel="stylesheet" href="conselho.css" />
+  </head>
+  <body>
+    <div class="cabecalho">
+      <h2>Wise</h2>
+      <h1>Goat</h1>
+    </div>
+    <div class="container_conselho">
+      <div class="fundo"></div>
+      <div class="texto">
+        <p id="conselho">{"}Carregando...{"}</p>
+        <p class="goat">- Goat</p>
+      </div>
+      <img src="../assets/bode_conselho.png" alt="Bodezinho" />
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const conselho = localStorage.getItem("conselho"); //Recupera o conselho salvo
+        if (conselho) {
+          document.getElementById("conselho").innerText = `"${conselho}"`; //Exibe na tela
+        } else {
+          document.getElementById("conselho").innerText =
+            "Nenhum conselho encontrado. ";
+        }
+      });
+    </script>
+  </body>
+</html>

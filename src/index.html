@@ -16,8 +16,23 @@
         <h2>Wise</h2>
         <h1>Goat</h1>
       </div>
-      <a href="pag2.html" target="_blank">Pedir Conselho</a>
+      <a href="conselho.html" onClick="buscarConselho()" target="_self"
+        >Pedir Conselho</a
+      >
     </div>
     <img src="../assets/bodezinho.png" alt="bodezinho" />
+
+    <script>
+      function buscarConselho() {
+        fetch("https://api.adviceslip.com/advice")
+          .then((response) => response.json())
+
+          .then((data) => {
+            localStorage.setItem("conselho", data.slip.advice);
+          })
+
+          .catch((error) => console.error("Erro ao buscar a frase:", error));
+      }
+    </script>
   </body>
 </html>
